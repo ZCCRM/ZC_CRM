@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购买产品</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../../../css/jquery-weui.css" rel="stylesheet">
+		<link href="../../../../css/weui.min.css" rel="stylesheet">
+		<style type="text/css">
+			.weui-cell{
+				/*height: 50px;*/
+			}
+			.weui-cell__hd{
+				width: 80%;
+			}
+			/*.weui-cell__bd{
+				height: 15px;
+			}*/
+			.weui-input{
+				float:right ;
+			}
+		</style>
+	</head>
+	<body style="background-color: rgb(238,238,238);">
+		<script type="text/javascript" src="../../../../js/mui.min.js" ></script>
+		<div class="weui-cells__title">MT3简易版</div>
+		<div class="mui-content">
+			<div class="mui-card" style="border-radius: 10px;">
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<div class="weui-cell">
+							<div class="weui-cell__hd"><label class="weui-label">简易版销售</label></div>
+							<div class="weui-cell__bd">
+								<input class="weui-input" type="number" pattern="[0-9]*" placeholder="1">
+							</div>
+						</div>
+						<div class="weui-cell">
+						    <div class="weui-cell__hd"><label class="weui-label">简易版三包</label></div>
+							<div class="weui-cell__bd">
+								<input class="weui-input"  type="number" pattern="[0-9]*" placeholder="1">
+							</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__hd"><label class="weui-label">简易版财务</label></div>
+							<div class="weui-cell__bd">
+								<input class="weui-input" type="number" pattern="[0-9]*" placeholder="1">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="weui-cells__title">MT3企业版</div>
+			<div class="mui-content">
+			<div class="mui-card" style="border-radius: 10px;">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">供销链</a>
+						<div class="mui-collapse-content">
+							<!--<form class="mui-input-group">-->
+								<div class="weui-cell">
+									<div class="weui-cell__hd"><label class="weui-label">入库订单</label></div>
+									<div class="weui-cell__bd">
+										<input class="weui-input" type="number" pattern="[0-9]*" placeholder="1">
+									</div>
+								</div>
+						        <div class="weui-cell">
+						          	<div class="weui-cell__hd"><label class="weui-label">入库</label></div>
+							        <div class="weui-cell__bd">
+										<input class="weui-input" type="number" pattern="[0-9]*" placeholder="1">
+									</div>
+						        </div>
+						        <div class="weui-cell">
+							        <div class="weui-cell__hd"><label class="weui-label">库存查询</label></div>
+							        <div class="weui-cell__bd">
+										<input class="weui-input" type="number" pattern="[0-9]*" placeholder="1">
+									</div>
+						        </div>
+						        <div class="weui-cell">
+							        <div class="weui-cell__hd "><label class="weui-label">库存处理</label></div>
+							        <div class="weui-cell__bd">
+										<input class="weui-input" type="number" pattern="[0-9]*" placeholder="1">
+									</div>
+							</div>
+						        </div>
+							<!--</form>-->
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<a href="buyHistory.html" class="weui-btn weui-btn_primary" style="margin: 10px; margin-top: 40px;">购买</a>
+	</body>
+</html>

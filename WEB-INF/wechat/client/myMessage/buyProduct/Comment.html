@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购买评价</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../../../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../../../css/weui.min.css"/>
+		<style type="text/css">
+			.evaluate{ padding:10px 15px; margin-top:10px; background:#fff;}
+			.evaluate .evaluateItem{ overflow:hidden;}
+		    .evaluate .evaluateItem span{ float:left; font-size:14px; color:#838383}
+		    .evaluate .evaluateItem .stars{ float:right;}
+		    .evaluate .evaluateItem .stars img{ width:18px; height:18px; float:left; margin:0 5px;}
+
+		</style>
+	</head>
+	<body>
+		<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-media-body">单号：1503254125120</div>
+						<div class="mui-media-body">日期：2015-12-05</div>
+						<div class="mui-media-body">实施人员：diary</div>
+					</a>
+				</li>
+		</ul>
+		<div class="evaluate" style="margin-top: 10px;">
+			<div class="evaluateItem">
+				<span>服务态度</span>
+				<div class="stars">
+					<img src="../../../../skins/star.png"/>
+                    <img src="../../../../skins/star.png"/>
+                    <img src="../../../../skins/star.png"/>
+                    <img src="../../../../skins/star.png"/>
+                    <img src="../../../../skins/star.png"/>
+				</div>
+			</div>
+			<div class="evaluateItem">
+				<span>业务技能</span>
+				<div class="stars">
+					<img src="../../../../skins/star.png"/>
+                    <img src="../../../../skins/star.png"/>
+                    <img src="../../../../skins/star.png"/>
+                    <img src="../../../../skins/star.png"/>
+                    <img src="../../../../skins/star.png"/>
+				</div>
+			</div>
+		</div>
+		<div class="mui-input-row" style="margin: 10px 0px;">
+			<textarea id="textarea" rows="5" placeholder="请输入评价"></textarea>
+		</div>
+		<a href="" class="weui-btn weui-btn_primary" style="margin: 0px; margin-top: 40px;">提交</a>
+
+		<script src="../../../../js/jquery-1.8.3.min.js"></script>
+		<script src="../../../../js/jquery-weui.js"></script>
+		<script type="text/javascript">
+			$('.stars img').each(function(index){
+				var star='../../../../skins/star.png';	//普通灰色星星图片的存储路径
+				var starRed='../../../../skins/starred.png';		//红色星星图片存储路径
+				//var prompt=['很差','比较差','一般','比较好','非常好'];	//评价提示语
+		        this.id=index;		//遍历img元素，设置单独的id
+		        $(this).on("click",function(){	//设置鼠标滑动和点击都会触发事件
+			    $(this).parents(".stars").find('img').attr('src',star);//当“回滚”、“改变主意”时，先复位所有图片为木有打星的图片颜色
+			    $(this).attr('src',starRed);		//设置鼠标当前所在图片为打星颜色图
+			    $(this).prevAll().attr('src',starRed);	//设置鼠标当前的前面星星图片为打星颜色图
+			    //$(this).siblings('span').text(prompt[this.id]);		//根据id的索引值作为数组的索引值
+			    });
+			});
+		</script>
+	</body>
+</html>
