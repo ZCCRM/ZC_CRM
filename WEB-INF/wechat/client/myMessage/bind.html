@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>绑定</title>
+		<link rel="stylesheet" href="../../../../css/jquery-weui.css" />
+		<link rel="stylesheet" href="../../../../css/weui.min.css" />
+		<script type="text/javascript" src="../../../../js/jquery-weui.js" ></script>
+	</head>
+	<body style="background-color: rgb(238,238,238);">
+		<script type="text/javascript">
+			function bindClick(){
+				var phone    = document.getElementById('number');
+				var password = document.getElementById('password');
+				if(phone.value == "") {
+					alert("账号不能为空！");
+					return;
+				}
+				if(password.value == 0) {
+					alert("密码不能为空！");
+					return;
+				}else{
+					window.location.href = "myMessage.html";
+				}			
+			}
+		</script>
+		<div class="weui-cells weui-cells_form">
+			<div class="weui-cell">
+				<div class="weui-cell__hd"><label class="weui-label">账号</label></div>
+				<div class="weui-cell__bd">
+					<input class="weui-input" id="number" type="number" pattern="[0-9]*" placeholder="请输入账号">
+				</div>
+			</div>
+			<div class="weui-cell">
+				<div class="weui-cell__hd">
+					<label class="weui-label">密码</label>
+				</div>
+				<div class="weui-cell__bd">
+					<input class="weui-input" id="password" type="password" placeholder="请输入密码">
+				</div>
+			</div>
+		</div>
+		<a href="javascript:;" id="bindBtn" class="weui-btn weui-btn_primary" style="margin: 60px 10px;" onclick="bindClick();">绑定</a>
+	</body>
+	
+</html>
